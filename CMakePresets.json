@@ -1,0 +1,63 @@
+{
+    "version": 3,
+    "configurePresets": [
+        {
+            "name": "base",
+            "hidden": true,
+            "binaryDir": "${sourceDir}/build",
+            "cacheVariables": {
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+            },
+            
+            "generator": "MinGW Makefiles"
+        },
+        {
+            "name": "base-debug",
+            "hidden": true,
+            "inherits": "base",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "base-release",
+            "hidden": true,
+            "inherits": "base",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        },
+        {
+            "name": "base-min-size-rel",
+            "hidden": true,
+            "inherits": "base",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "MinSizeRel"
+            }
+        },
+        {
+            "name": "PICO",
+            "inherits": "base-debug",
+            "cacheVariables": {}
+        },
+        {
+            "name": "PICO-W",
+            "inherits": "base-debug",
+            "cacheVariables": {}
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "PICO",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "PICO"
+        },
+        {
+            "name": "PICO-W",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "PICO-W"
+        }
+    ]
+}

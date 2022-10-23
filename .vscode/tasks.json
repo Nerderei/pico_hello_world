@@ -1,0 +1,22 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Format",
+            "type": "shell",
+            "command": "pipx run clang-format -i -style=file:${workspaceFolder}/.clang-format ${file}",
+            "isBackground": true,
+            "runOptions": {
+                "runOn": "default"
+            },
+            "presentation": {
+                "reveal": "silent",
+                "revealProblems": "onProblem",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+{
+    "cmake.configureOnOpen": true,
+    "cortex-debug.showRTOS": true,
+    "cortex-debug.variableUseNaturalFormat": false
+}
